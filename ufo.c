@@ -43,29 +43,23 @@ void ufo(float s) {
 
     glBegin(GL_POLYGON);
         glNormal3f(0.0,1.0,0.0);
-        glColor3f(0.60,0.42,0.84);
+        glColor3f(0.00,0.60,0.90);
         glVertex3f( 0.0f, 1.5f, s*0.0f);
-        glColor3f(0.60,0.42,0.84);
         glVertex3f( 0.0f, 1.0f,  s*1.0f);
-        glColor3f(0.60,0.42,0.84);
         glVertex3f( s*1.0f, 1.0f,  s*0.25);
         glNormal3f(0.0,1.0,0.0);
-        glColor3f(0.60,0.60,0.20);
         glVertex3f( 0.0f, 1.5f, 0.0f);
         glVertex3f( s*1.0f, 1.0f,  s*0.25f);
         glVertex3f( s*0.60f, 1.0f,  s*-0.9f);
         glNormal3f(0.0,1.0,0.0);
-        glColor3f(1.0,0.1,0.9);
         glVertex3f( 0.0f, 1.5f, 0.0f);
         glVertex3f( s*0.60f, 1.0f,  s*-0.9f);
         glVertex3f( s*-0.60f, 1.0f,  s*-0.9f);
         glNormal3f(0.0,1.0,0.0);
-        glColor3f(1.0,0.0,0.0);
         glVertex3f( 0.0f, 1.5f, 0.0f);
         glVertex3f( s*-0.60f, 1.0f, s*-0.9f);
         glVertex3f( s*-1.0f, 1.0f, s*0.25f);
         glNormal3f(0.0,1.0,0.0);
-        glColor3f(0.2,0.9,0.6);
         glVertex3f( 0.0f, 1.5f, 0.0f);
         glVertex3f( s*-1.0f, 1.0f,  s*0.25f);
         glVertex3f( 0.0f, 1.0f,  s*1.0f);
@@ -91,27 +85,22 @@ void ufo(float s) {
 
     glBegin(GL_POLYGON);
         glNormal3f(0.0,-1.0,0.0);
-        glColor3f(0.60,0.42,0.84);
         glVertex3f( 0.0f, 0.5f, 0.0f);
         glVertex3f( 0.0f, 1.0f,  s*1.0f);
         glVertex3f( s*1.0f, 1.0f,  s*0.25);
         glNormal3f(0.0,-1.0,0.0);
-        glColor3f(0.60,0.60,0.20);
         glVertex3f( 0.0f, 0.5f, 0.0f);
         glVertex3f( s*1.0f, 1.0f,  s*0.25f);
         glVertex3f( s*0.60f, 1.0f,  s*-0.9f);
         glNormal3f(0.0,-1.0,0.0);
-        glColor3f(1.0,1.0,0.0);
         glVertex3f( 0.0f, 0.5f, 0.0f);
         glVertex3f( s*0.60f, 1.0f,  s*-0.9f);
         glVertex3f( s*-0.60f, 1.0f,  s*-0.9f);
         glNormal3f(0.0,-1.0,0.0);
-        glColor3f(1.0,0.0,0.0);
         glVertex3f( 0.0f, 0.5f, 0.0f);
         glVertex3f( s*-0.60f, 1.0f, s*-0.9f);
         glVertex3f( s*-1.0f, 1.0f, s*0.25f);
         glNormal3f(0.0,-1.0,0.0);
-        glColor3f(0.2,0.9,0.6);
         glVertex3f( 0.0f, 0.5f, 0.0f);
         glVertex3f( s*-1.0f, 1.0f,  s*0.25f);
         glVertex3f( 0.0f, 1.0f,  s*1.0f);
@@ -547,7 +536,6 @@ void init(int Width, int Height) {
     glClearDepth(1.0);
     glDepthFunc(GL_LESS);
     glShadeModel(GL_SMOOTH);
-    // reshape(Width,Height);
 }
 
 void reshape(int w, int h) {
@@ -558,8 +546,7 @@ void reshape(int w, int h) {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(-16, 16, -12, 12, -100, 100);
-    // glFrustum(-16.0, 16.0, -12.0, 12.0, 0.1, 100.0);
-    gluLookAt(3.0,2.0,4.0,
+    gluLookAt(1.5,1.0,-2.0,
               0.0,0.0,0.0,
               0.0,1.0,0.0);
     glMatrixMode(GL_MODELVIEW);
